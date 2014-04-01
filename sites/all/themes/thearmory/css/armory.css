@@ -1,0 +1,906 @@
+@import url(http://fonts.googleapis.com/css?family=Alegreya+SC:400,700,900);
+/* fonts */
+/* colors */
+/* other variables */
+/* breakpoints */
+/* hover style background position change */
+@-webkit-keyframes bp {
+  /* Safari and Chrome */
+  /* line 28, ../sass/armory.scss */
+  from {
+    background-position-y: 0;
+  }
+
+  /* line 31, ../sass/armory.scss */
+  to {
+    background-position-y: -95px;
+  }
+}
+
+@-moz-keyframes bp {
+  /* Safari and Chrome */
+  /* line 36, ../sass/armory.scss */
+  from {
+    background-position: inherit 0;
+  }
+
+  /* line 39, ../sass/armory.scss */
+  to {
+    background-position: inherit -95px;
+  }
+}
+
+@-o-keyframes bp {
+  /* Safari and Chrome */
+  /* line 44, ../sass/armory.scss */
+  from {
+    background-position-y: 0;
+  }
+
+  /* line 47, ../sass/armory.scss */
+  to {
+    background-position-y: -95px;
+  }
+}
+
+@keyframes bp {
+  /* Safari and Chrome */
+  /* line 52, ../sass/armory.scss */
+  from {
+    background-position-y: 0;
+  }
+
+  /* line 55, ../sass/armory.scss */
+  to {
+    background-position-y: -95px;
+  }
+}
+
+/* the basics */
+/* line 61, ../sass/armory.scss */
+body, html {
+  background: #46352f url("../images/main_bg.jpg") no-repeat 50% -10em;
+  background-attachment: fixed;
+  color: white;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 400;
+  font-size: 100%;
+}
+
+/* line 70, ../sass/armory.scss */
+a:link,
+a:visited {
+  border-bottom: 1px solid transparent;
+  color: #cc5500;
+  text-decoration: none;
+  -moz-transition: border-bottom 0.5s ease;
+  -o-transition: border-bottom 0.5s ease;
+  -webkit-transition: border-bottom 0.5s ease;
+  transition: border-bottom 0.5s ease;
+}
+
+/* line 81, ../sass/armory.scss */
+a:hover,
+a:focus,
+a:active {
+  border-bottom: 1px solid white;
+  color: #d47e40;
+}
+
+/* line 86, ../sass/armory.scss */
+.btn-container,
+.form-actions {
+  font-size: 1.25em;
+  text-align: center;
+}
+/* line 91, ../sass/armory.scss */
+.btn-container .btn,
+.btn-container .form-submit,
+.form-actions .btn,
+.form-actions .form-submit {
+  background: #cc5500;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+  color: white;
+  margin: 0 0.5em;
+  padding: 0.5em 2em;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+/* line 106, ../sass/armory.scss */
+.btn-container .btn:hover, .btn-container .btn:active, .btn-container .btn:focus,
+.btn-container .form-submit:hover,
+.btn-container .form-submit:active,
+.btn-container .form-submit:focus,
+.form-actions .btn:hover,
+.form-actions .btn:active,
+.form-actions .btn:focus,
+.form-actions .form-submit:hover,
+.form-actions .form-submit:active,
+.form-actions .form-submit:focus {
+  background: #d47e40;
+}
+
+/* line 111, ../sass/armory.scss */
+.node-webform {
+  text-align: center;
+}
+
+/* line 114, ../sass/armory.scss */
+.form-item {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 auto 1em;
+  max-width: 500px;
+  padding: 0 1em;
+  width: 100%;
+}
+/* line 123, ../sass/armory.scss */
+.form-item.form-type-checkbox, .form-item.form-type-radios {
+  text-align: left;
+}
+/* line 127, ../sass/armory.scss */
+.form-item label {
+  text-align: left;
+}
+/* line 132, ../sass/armory.scss */
+.form-item input,
+.form-item textarea {
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  color: #46352f;
+  padding: 0.5em;
+  width: 100%;
+}
+/* line 139, ../sass/armory.scss */
+.form-item input.form-checkbox,
+.form-item textarea.form-checkbox {
+  width: auto;
+}
+
+/* line 145, ../sass/armory.scss */
+.comment-form .form-item {
+  margin: 0 0 1em;
+}
+/* line 148, ../sass/armory.scss */
+.comment-form .filter-wrapper {
+  display: none;
+}
+
+/* line 152, ../sass/armory.scss */
+::-webkit-input-placeholder {
+  color: #46352f;
+}
+
+/* line 155, ../sass/armory.scss */
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #46352f;
+}
+
+/* line 158, ../sass/armory.scss */
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #46352f;
+}
+
+/* line 161, ../sass/armory.scss */
+:-ms-input-placeholder {
+  color: #46352f;
+}
+
+/* line 165, ../sass/armory.scss */
+h1.page__title {
+  font-family: "Alegreya SC", Georgia, "Times New Roman", "DejaVu Serif", serif serif;
+  padding-top: 0.5em;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* header */
+/* line 172, ../sass/armory.scss */
+.header {
+  text-align: center;
+}
+/* line 175, ../sass/armory.scss */
+.header .header__logo {
+  display: inline-block;
+  float: none;
+  margin-top: 10em;
+}
+/* line 180, ../sass/armory.scss */
+.header .header__logo:hover {
+  border-bottom: 1px solid transparent;
+}
+/* line 185, ../sass/armory.scss */
+.header .header__name-and-slogan {
+  float: none;
+  margin: 2em 0;
+}
+/* line 189, ../sass/armory.scss */
+.header .header__name-and-slogan .header__site-name {
+  height: 0;
+  text-indent: -20000px;
+}
+/* line 194, ../sass/armory.scss */
+.header .header__name-and-slogan .header__site-slogan {
+  font-family: "Alegreya SC", Georgia, "Times New Roman", "DejaVu Serif", serif serif;
+  font-size: 2em;
+  font-weight: 400;
+  line-height: 1.15;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 400px) {
+  /* line 194, ../sass/armory.scss */
+  .header .header__name-and-slogan .header__site-slogan {
+    font-size: 1.75em;
+  }
+}
+
+/* navigation */
+/* line 209, ../sass/armory.scss */
+#navigation {
+  background: #46352f;
+  height: auto;
+  margin: 1em 0 0;
+  padding: 2em 0;
+  position: initial;
+  top: auto;
+}
+/* line 217, ../sass/armory.scss */
+#navigation #main-menu > ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+/* line 223, ../sass/armory.scss */
+#navigation #main-menu > ul li {
+  display: inline-block;
+  float: none;
+  padding: 1em;
+}
+/* line 228, ../sass/armory.scss */
+#navigation #main-menu > ul li a {
+  display: inline-block;
+  color: white;
+  font-size: 0.75em;
+  font-family: "Alegreya SC", Georgia, "Times New Roman", "DejaVu Serif", serif serif;
+  padding: 4.5em 0 0;
+  -moz-transition: all 0.5s ease 0.1s;
+  -o-transition: all 0.5s ease 0.1s;
+  -webkit-transition: all 0.5s ease 0.1s;
+  transition: all 0.5s ease 0.1s;
+  width: 70px;
+}
+/* line 240, ../sass/armory.scss */
+#navigation #main-menu > ul li a.nav-about {
+  background: url("../images/nav-icons.png") no-repeat -350px 0;
+}
+/* line 245, ../sass/armory.scss */
+#navigation #main-menu > ul li a.nav-about.active, #navigation #main-menu > ul li a.nav-about:hover, #navigation #main-menu > ul li a.nav-about:active {
+  background: url("../images/nav-icons.png") no-repeat -350px -95px;
+}
+/* line 250, ../sass/armory.scss */
+#navigation #main-menu > ul li a.nav-blog {
+  background: url("../images/nav-icons.png") no-repeat -70px 0;
+}
+/* line 255, ../sass/armory.scss */
+#navigation #main-menu > ul li a.nav-blog.active, #navigation #main-menu > ul li a.nav-blog:hover, #navigation #main-menu > ul li a.nav-blog:active {
+  background: url("../images/nav-icons.png") no-repeat -70px -95px;
+}
+/* line 260, ../sass/armory.scss */
+#navigation #main-menu > ul li a.nav-community {
+  background: url("../images/nav-icons.png") no-repeat 0 0;
+}
+/* line 265, ../sass/armory.scss */
+#navigation #main-menu > ul li a.nav-community.active, #navigation #main-menu > ul li a.nav-community:hover, #navigation #main-menu > ul li a.nav-community:active {
+  background: url("../images/nav-icons.png") no-repeat 0 -95px;
+}
+/* line 270, ../sass/armory.scss */
+#navigation #main-menu > ul li a.nav-contact {
+  background: url("../images/nav-icons.png") no-repeat -140px 0;
+}
+/* line 275, ../sass/armory.scss */
+#navigation #main-menu > ul li a.nav-contact.active, #navigation #main-menu > ul li a.nav-contact:hover, #navigation #main-menu > ul li a.nav-contact:active {
+  background: url("../images/nav-icons.png") no-repeat -140px -95px;
+}
+/* line 280, ../sass/armory.scss */
+#navigation #main-menu > ul li a.nav-gallery {
+  background: url("../images/nav-icons.png") no-repeat -210px 0;
+}
+/* line 285, ../sass/armory.scss */
+#navigation #main-menu > ul li a.nav-gallery.active, #navigation #main-menu > ul li a.nav-gallery:hover, #navigation #main-menu > ul li a.nav-gallery:active {
+  background: url("../images/nav-icons.png") no-repeat -210px -95px;
+}
+/* line 290, ../sass/armory.scss */
+#navigation #main-menu > ul li a.nav-membership {
+  background: url("../images/nav-icons.png") no-repeat -280px 0;
+}
+/* line 295, ../sass/armory.scss */
+#navigation #main-menu > ul li a.nav-membership.active, #navigation #main-menu > ul li a.nav-membership:hover, #navigation #main-menu > ul li a.nav-membership:active {
+  background: url("../images/nav-icons.png") no-repeat -280px -95px;
+}
+
+/* line 303, ../sass/armory.scss */
+#navigation #main-menu > ul li a.active.nav-contact {
+  background: url("../images/nav-icons.png") no-repeat -140px 0;
+}
+
+/* line 307, ../sass/armory.scss */
+#navigation #main-menu > ul li a.active.nav-contact:hover,
+#navigation #main-menu > ul li a.active.nav-contact:active {
+  background: url("../images/nav-icons.png") no-repeat -140px -95px;
+}
+
+/* line 311, ../sass/armory.scss */
+.node-type-blog-entry #navigation #main-menu > ul li a.nav-blog,
+.node-type-blog #navigation #main-menu > ul li a.nav-blog {
+  background: url("../images/nav-icons.png") no-repeat -70px -95px;
+}
+
+/* content */
+/* line 316, ../sass/armory.scss */
+#page {
+  background: white;
+  color: #46352f;
+  margin: 0;
+}
+
+/* line 321, ../sass/armory.scss */
+#main {
+  padding-top: 1em;
+}
+
+/* line 325, ../sass/armory.scss */
+.front h1.page__title,
+.front #first-time {
+  display: none;
+}
+
+/* line 328, ../sass/armory.scss */
+h2.block-title {
+  font-family: "Alegreya SC", Georgia, "Times New Roman", "DejaVu Serif", serif serif;
+  margin-bottom: 1em;
+  text-align: center;
+}
+@media all and (max-width: 600px) {
+  /* line 328, ../sass/armory.scss */
+  h2.block-title {
+    font-size: 1.25em;
+  }
+}
+
+/* line 337, ../sass/armory.scss */
+.freetrial {
+  border-bottom: 1px dashed rgba(212, 125, 63, 0.25);
+  margin-bottom: 1em;
+  padding-bottom: 3em;
+}
+
+/* line 342, ../sass/armory.scss */
+.latest-blog {
+  background: #cc5500;
+  margin-bottom: 0;
+  overflow: hidden;
+  padding: 1em 0;
+  text-align: center;
+}
+/* line 349, ../sass/armory.scss */
+.latest-blog h2 {
+  display: inline;
+  margin: 0 0.5em 0 0;
+}
+/* line 357, ../sass/armory.scss */
+.latest-blog .content,
+.latest-blog .view,
+.latest-blog .view-content,
+.latest-blog .views-row,
+.latest-blog .views-field {
+  display: inline;
+  margin: 0;
+}
+/* line 362, ../sass/armory.scss */
+.latest-blog .views-field-title a {
+  color: white;
+}
+@media all and (max-width: 600px) {
+  /* line 368, ../sass/armory.scss */
+  .latest-blog h2,
+  .latest-blog .content {
+    display: block;
+  }
+}
+
+/* line 373, ../sass/armory.scss */
+.contact-block {
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjAxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjYiLz4KICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjAuNzUiLz4KICAgIDxzdG9wIG9mZnNldD0iNjAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjAuNiIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjAuMDEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.6) 40%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 0.6) 60%, rgba(255, 255, 255, 0.01) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0.01)), color-stop(40%, rgba(255, 255, 255, 0.6)), color-stop(50%, rgba(255, 255, 255, 0.75)), color-stop(60%, rgba(255, 255, 255, 0.6)), color-stop(100%, rgba(255, 255, 255, 0.01)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.6) 40%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 0.6) 60%, rgba(255, 255, 255, 0.01) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.6) 40%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 0.6) 60%, rgba(255, 255, 255, 0.01) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.6) 40%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 0.6) 60%, rgba(255, 255, 255, 0.01) 100%);
+  /* IE10+ */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.6) 40%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 0.6) 60%, rgba(255, 255, 255, 0.01) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#03ffffff', endColorstr='#03ffffff',GradientType=1 );
+  /* IE6-8 */
+  margin: 0;
+  padding: 2em 0 0.5em;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+}
+/* line 388, ../sass/armory.scss */
+.contact-block > h2 {
+  color: #46352f;
+  font-family: "Alegreya SC", Georgia, "Times New Roman", "DejaVu Serif", serif serif;
+  font-size: 2em;
+  margin: 0;
+  text-align: center;
+}
+/* line 396, ../sass/armory.scss */
+.contact-block .node-webform {
+  color: #46352f;
+}
+/* line 399, ../sass/armory.scss */
+.contact-block .node-webform > header {
+  display: none;
+}
+/* line 403, ../sass/armory.scss */
+.contact-block .node-webform .field-name-body {
+  font-size: 1.25em;
+}
+/* line 406, ../sass/armory.scss */
+.contact-block .node-webform .field-name-body p {
+  margin: 0 0 0.5em;
+}
+/* line 409, ../sass/armory.scss */
+.contact-block .node-webform .field-name-body p a {
+  color: #46352f;
+}
+/* line 412, ../sass/armory.scss */
+.contact-block .node-webform .field-name-body p a:hover {
+  border-bottom: 1px solid #46352f;
+}
+
+/* line 420, ../sass/armory.scss */
+.contact-text {
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjAxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjYiLz4KICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjAuNzUiLz4KICAgIDxzdG9wIG9mZnNldD0iNjAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjAuNiIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjAuMDEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.6) 40%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 0.6) 60%, rgba(255, 255, 255, 0.01) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0.01)), color-stop(40%, rgba(255, 255, 255, 0.6)), color-stop(50%, rgba(255, 255, 255, 0.75)), color-stop(60%, rgba(255, 255, 255, 0.6)), color-stop(100%, rgba(255, 255, 255, 0.01)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.6) 40%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 0.6) 60%, rgba(255, 255, 255, 0.01) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.6) 40%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 0.6) 60%, rgba(255, 255, 255, 0.01) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.6) 40%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 0.6) 60%, rgba(255, 255, 255, 0.01) 100%);
+  /* IE10+ */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.6) 40%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 0.6) 60%, rgba(255, 255, 255, 0.01) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#03ffffff', endColorstr='#03ffffff',GradientType=1 );
+  /* IE6-8 */
+  color: #1a1a1a;
+  font-size: 1.125em;
+  margin: 0;
+  padding: 0 0 1em;
+  text-align: center;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+}
+/* line 438, ../sass/armory.scss */
+.contact-text p {
+  margin: 0;
+}
+
+/* line 444, ../sass/armory.scss */
+.section-memberships .node {
+  text-align: center;
+}
+/* line 447, ../sass/armory.scss */
+.section-memberships .node p {
+  text-align: left;
+}
+/* line 451, ../sass/armory.scss */
+.section-memberships .node ul {
+  text-align: left;
+}
+
+/* line 455, ../sass/armory.scss */
+.membership-level {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: rgba(212, 125, 63, 0.25);
+  background-size: 100% !important;
+  border: 1px solid #cc5500;
+  border-radius: 100%;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+  display: inline-block;
+  height: 240px;
+  margin: 0 1em 2em;
+  padding: 1em;
+  text-align: center;
+  width: 240px;
+  vertical-align: top;
+}
+/* line 471, ../sass/armory.scss */
+.membership-level.membership-24 {
+  background: rgba(212, 125, 63, 0.25) url("../images/membership_24.png") no-repeat 50% 50%;
+}
+/* line 472, ../sass/armory.scss */
+.membership-level.membership-5 {
+  background: rgba(212, 125, 63, 0.25) url("../images/membership_5.png") no-repeat 50% 50%;
+}
+/* line 473, ../sass/armory.scss */
+.membership-level.membership-3 {
+  background: rgba(212, 125, 63, 0.25) url("../images/membership_3.png") no-repeat 50% 50%;
+}
+/* line 474, ../sass/armory.scss */
+.membership-level.membership-2 {
+  background: rgba(212, 125, 63, 0.25) url("../images/membership_2.png") no-repeat 50% 50%;
+}
+/* line 475, ../sass/armory.scss */
+.membership-level.membership-1 {
+  background: rgba(212, 125, 63, 0.25) url("../images/membership_1.png") no-repeat 50% 50%;
+}
+/* line 476, ../sass/armory.scss */
+.membership-level.membership-single {
+  background: rgba(212, 125, 63, 0.25) url("../images/membership_1.png") no-repeat 50% 50%;
+}
+/* line 478, ../sass/armory.scss */
+.membership-level > h2 {
+  font-family: "Alegreya SC", Georgia, "Times New Roman", "DejaVu Serif", serif serif;
+  font-size: 1.5em;
+  margin: 2em 0 0;
+}
+@media all and (max-width: 650px) {
+  /* line 478, ../sass/armory.scss */
+  .membership-level > h2 {
+    font-size: 1em;
+    margin-top: 0.5em;
+  }
+}
+@media all and (max-width: 400px) {
+  /* line 478, ../sass/armory.scss */
+  .membership-level > h2 {
+    margin-top: 0;
+  }
+}
+/* line 493, ../sass/armory.scss */
+.membership-level > p {
+  margin: 0;
+  text-align: center !important;
+}
+@media all and (max-width: 650px) {
+  /* line 493, ../sass/armory.scss */
+  .membership-level > p {
+    font-size: 0.75em;
+  }
+}
+/* line 502, ../sass/armory.scss */
+.membership-level > h4 {
+  color: #cc5500;
+  font-family: "Alegreya SC", Georgia, "Times New Roman", "DejaVu Serif", serif serif;
+  font-size: 1.75em;
+  margin: 0 0 0.25em;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
+}
+@media all and (max-width: 650px) {
+  /* line 502, ../sass/armory.scss */
+  .membership-level > h4 {
+    font-size: 1em;
+  }
+}
+@media all and (max-width: 650px) {
+  /* line 455, ../sass/armory.scss */
+  .membership-level {
+    height: 150px;
+    margin: 0 1em 1em;
+    width: 150px;
+  }
+}
+@media all and (max-width: 400px) {
+  /* line 455, ../sass/armory.scss */
+  .membership-level {
+    height: 140px;
+    margin: 0 0.25em 1em;
+    width: 140px;
+  }
+}
+
+/* responsive video */
+/* line 528, ../sass/armory.scss */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+/* line 537, ../sass/armory.scss */
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Views */
+/* line 547, ../sass/armory.scss */
+.view ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 551, ../sass/armory.scss */
+.view ul li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 556, ../sass/armory.scss */
+.view ul li .views-field-title {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+/* line 560, ../sass/armory.scss */
+.view ul li .views-field-created {
+  font-size: 0.85em;
+}
+/* line 563, ../sass/armory.scss */
+.view ul li p {
+  margin: 0 0 1em;
+}
+
+/* line 569, ../sass/armory.scss */
+.pager li {
+  border: 1px solid #cc5500;
+  line-height: 2em;
+  margin: 0 0.25em;
+}
+/* line 574, ../sass/armory.scss */
+.pager li.pager-current {
+  background: rgba(212, 125, 63, 0.25);
+  font-weight: normal;
+  padding: 0 0.5em;
+  text-decoration: none;
+}
+/* line 580, ../sass/armory.scss */
+.pager li.pager-ellipsis {
+  padding: 0 0.5em;
+}
+/* line 584, ../sass/armory.scss */
+.pager li a {
+  padding: 0 0.5em;
+}
+/* line 587, ../sass/armory.scss */
+.pager li a:hover {
+  background: rgba(212, 125, 63, 0.25);
+  border-bottom: none;
+}
+
+/* line 594, ../sass/armory.scss */
+.featured-member {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 auto 2em;
+  max-width: 960px;
+  overflow: hidden;
+  padding: 0 1em;
+  text-align: center;
+}
+/* line 603, ../sass/armory.scss */
+.featured-member .block-title {
+  margin: 0 0 1em;
+}
+/* line 607, ../sass/armory.scss */
+.featured-member .views-field-title {
+  font-size: 1.5em;
+  margin-bottom: 0.75em;
+  margin-top: 0.75em;
+}
+@media all and (min-width: 400px) {
+  /* line 594, ../sass/armory.scss */
+  .featured-member {
+    text-align: left;
+  }
+  /* line 616, ../sass/armory.scss */
+  .featured-member .views-field-field-member-image {
+    float: left;
+    margin: 0 1em 1em 0;
+  }
+  /* line 620, ../sass/armory.scss */
+  .featured-member .views-field-title {
+    margin-top: 0;
+  }
+}
+
+/* line 627, ../sass/armory.scss */
+.view-community .views-row {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  min-height: 290px;
+  padding: 1em;
+  text-align: center;
+  width: 33%;
+}
+@media all and (max-width: 600px) {
+  /* line 627, ../sass/armory.scss */
+  .view-community .views-row {
+    width: 50%;
+  }
+}
+/* line 640, ../sass/armory.scss */
+.view-community .views-row .community-image-wrapper {
+  height: 180px;
+  margin: 0 auto;
+  position: relative;
+  width: 180px;
+}
+@media all and (max-width: 480px) {
+  /* line 640, ../sass/armory.scss */
+  .view-community .views-row .community-image-wrapper {
+    height: 120px;
+    width: 120px;
+  }
+}
+/* line 651, ../sass/armory.scss */
+.view-community .views-row .community-image-wrapper img {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+/* line 657, ../sass/armory.scss */
+.view-community .views-row .community-image-wrapper .community-info {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #1a1a1a;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: none;
+  font-size: 0.875em;
+  height: 100%;
+  left: 0;
+  padding: 1em;
+  position: absolute;
+  text-align: left;
+  top: 0;
+  width: 100%;
+}
+@media all and (max-width: 480px) {
+  /* line 657, ../sass/armory.scss */
+  .view-community .views-row .community-image-wrapper .community-info {
+    font-size: 0.65em;
+  }
+}
+/* line 680, ../sass/armory.scss */
+.view-community .views-row .community-image-wrapper:hover .community-info, .view-community .views-row .community-image-wrapper:active .community-info {
+  display: block;
+}
+/* line 686, ../sass/armory.scss */
+.view-community .views-row .views-field-title {
+  font-size: 1.125em;
+  font-weight: bold;
+}
+
+/* line 694, ../sass/armory.scss */
+.view-gallery ul {
+  overflow: hidden;
+  width: 100%;
+}
+/* line 698, ../sass/armory.scss */
+.view-gallery ul li {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  min-height: 270px;
+  padding: 1em;
+  text-align: center;
+  width: 33%;
+  vertical-align: top;
+}
+@media all and (max-width: 480px) {
+  /* line 698, ../sass/armory.scss */
+  .view-gallery ul li {
+    width: 50%;
+  }
+}
+/* line 712, ../sass/armory.scss */
+.view-gallery ul li p {
+  margin: 0;
+}
+/* line 716, ../sass/armory.scss */
+.view-gallery ul li .views-field-title {
+  color: #cc5500;
+}
+@media all and (max-width: 480px) {
+  /* line 716, ../sass/armory.scss */
+  .view-gallery ul li .views-field-title {
+    font-size: 0.75em;
+  }
+}
+
+/* line 728, ../sass/armory.scss */
+.node-member .field-name-field-member-image {
+  float: left;
+  margin: 0 1em 1em 0;
+  max-width: 100%;
+  width: 300px;
+}
+@media all and (max-width: 600px) {
+  /* line 728, ../sass/armory.scss */
+  .node-member .field-name-field-member-image {
+    float: none;
+    margin: 0 auto 1em;
+  }
+}
+/* line 740, ../sass/armory.scss */
+.node-member .field-name-body {
+  margin-bottom: 1em;
+}
+/* line 744, ../sass/armory.scss */
+.node-member .field-name-field-twitter-handle {
+  margin: 1em 0 0;
+}
+
+/* Footer */
+/* line 751, ../sass/armory.scss */
+.front #footer {
+  background: url("../images/map.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  padding: 0 0 0 0;
+}
+
+/* copyright */
+/* line 758, ../sass/armory.scss */
+.copyright {
+  background: #fff;
+  color: #46352f;
+  font-family: "Alegreya SC", Georgia, "Times New Roman", "DejaVu Serif", serif serif;
+  font-size: 1.25em;
+  font-weight: 700;
+  padding: 3em 1em;
+  text-align: center;
+}
+
+/* line 768, ../sass/armory.scss */
+#social {
+  margin: 1em 0 0;
+}
+/* line 771, ../sass/armory.scss */
+#social a {
+  display: inline-block;
+  height: 50px;
+  margin: 0 1em;
+  text-indent: -20000px;
+  width: 50px;
+}
+/* line 778, ../sass/armory.scss */
+#social a.tw {
+  background: url("../images/social.png") no-repeat 0 0;
+}
+/* line 781, ../sass/armory.scss */
+#social a.fb {
+  background: url("../images/social.png") no-repeat -2.5em 0;
+}
+@media all and (min-width: 600px) {
+  /* line 785, ../sass/armory.scss */
+  #social a:hover {
+    background-position-y: -2.5em;
+  }
+}
